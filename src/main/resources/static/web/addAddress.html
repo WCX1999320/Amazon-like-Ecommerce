@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta name="renderer" content="webkit" />
+		<title>Computer Plaza</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="../bootstrap3/js/holder.js"></script>
+		<link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<script src="../bootstrap3/jquery-1.9.1.min.js"></script>
+		<script src="../bootstrap3/js/bootstrap.js"></script>
+
+		<link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../css/top.css" />
+		<link rel="stylesheet" type="text/css" href="../css/footer.css" />
+		<!--
+		<script type="text/javascript" src="../js/distpicker.data.js"></script>
+		<script type="text/javascript" src="../js/distpicker.js"></script>
+		-->
+	</head>
+
+	<body>
+
+		<header class="header">
+
+			<div class="row">
+				<div class="col-md-3">
+					<a href="index.html">
+						<img src="../images/index/stumalllogo.png" />
+					</a>
+				</div>
+
+				<div class="col-md-9 top-item">
+					<ul class="list-inline pull-right">
+						<li><a href="favorites.html"><span class="fa fa-heart"></span>&nbsp;Favorites</a></li>
+						<li class="li-split">|</li>
+						<li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;Orders</a></li>
+						<li class="li-split">|</li>
+						<li><a href="cart.html"><span class="fa fa-cart-plus"></span>&nbsp;Cart</a></li>
+						<li class="li-split">|</li>
+						<li>
+
+							<div class="btn-group">
+								<button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+									<span id="top-dropdown-btn"><span class="fa fa-gears"></span>&nbsp;Management <span class="caret"></span></span>
+								</button>
+								<ul class="dropdown-menu top-dropdown-ul" role="menu">
+									<li><a href="password.html">Modify Password</a></li>
+									<li><a href="userdata.html">Personal Information</a></li>
+									<li><a href="upload.html">Upload avatar</a></li>
+									<li><a href="address.html">Receipt management</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="li-split">|</li>
+						<li><a href="login.html"><span class="fa fa-user"></span>&nbsp;Login</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<div class="row top-nav">
+			<div class="col-md-6">
+				<ul class="nav nav-pills">
+					<li>
+						<a href="#"></a>
+					</li>
+					<li class="active"><a href="index.html"><span class="fa fa-home"></span></a></li>
+					<li><a href="#">Panic-buying</a></li>
+					<li><a href="#">Coupon</a></li>
+					<li><a href="#">VIP</a></li>
+					<li><a href="#">Take-out</a></li>
+					<li><a href="#">Market</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<form action="search.html" class="form-inline pull-right" role="form">
+					<div class="form-group">
+						<input type="text" class="form-control" id="search" name="search" placeholder="Please enter item's name">
+					</div>
+					<button type="submit" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button>
+				</form>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="col-md-2">
+
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+
+							<p class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">My orders</a>
+							</p>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div><a href="orders.html">All orders</a></div>
+								<div><a href="orders.html">Pending payment</a></div>
+								<div><a href="orders.html">Pending receipt</a></div>
+								<div><a href="orders.html">Pending comment</a></div>
+								<div><a href="orders.html">Refunds</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<p class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Modify Information</a>
+							</p>
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div><a href="password.html">Modify Password</a></div>
+								<div><a href="userdata.html">Personal Information</a></div>
+								<div><a href="upload.html">Upload Avatar</a></div>
+								<div><a href="address.html"><b>Receipt Management</b></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-md-10">
+				<div class="panel panel-default">
+					<ul class="nav nav-tabs">
+						<li><a href="password.html">Modify Password</a></li>
+						<li><a href="userdata.html">Personal Information</a></li>
+						<li><a href="upload.html">Upload avatar</a></li>
+						<li class="active"><a href="#">Receipt management</a></li>
+					</ul>
+					<div class="panel-body">
+
+						<form id="form-add-new-address" class="form-horizontal" role="form">
+							<div class="form-group">
+								<label class="col-md-2 control-label"><span class="txtred">*</span>Receiver：</label>
+								<div class="col-md-8">
+									<input name="name" type="text" class="form-control" placeholder="Please enter Receiver's name">
+								</div>
+							</div>
+							<div class="address_content" data-toggle="distpicker">
+								<div class="form-group">
+									<label class="col-md-2 control-label"><span class="txtred">*</span>Province/City：</label>
+									<div class="col-md-3">
+										<select id="province-list" name="provinceCode" class="form-control" data-province="---- Province ----"></select>
+									</div>
+									<label class="col-md-2 control-label"><span class="txtred">*</span>City：</label>
+									<div class="col-md-3">
+										<select id="city-list" name="cityCode" class="form-control" data-city="---- City ----"></select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 control-label"><span class="txtred">*</span>District：</label>
+									<div class="col-md-3">
+										<select id="area-list" name="areaCode" class="form-control" data-district="---- District ----"></select>
+									</div>
+									<label class="col-md-2 control-label">Zip Code：</label>
+									<div class="col-md-3">
+										<input name="zip" type="text" class="form-control" placeholder="Please enter zip code">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label"><span class="txtred">*</span>Address：</label>
+								<div class="col-md-8">
+									<textarea name="address" class="form-control" rows="3" placeholder="Please enter address"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label"><span class="txtred">*</span>Phone</label>
+								<div class="col-md-3">
+									<input name="phone" type="text" class="form-control" placeholder="Please enter phone num">
+								</div>
+								<label class="col-md-2 control-label">Fixed-line telephone：</label>
+								<div class="col-md-3">
+									<input name="tel" type="text" class="form-control" placeholder="Please enter fixed-line phone num">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Address type：</label>
+								<div class="col-md-8">
+									<input name="tag" type="text" class="form-control" placeholder="Please enter address type:">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-md-2 control-label"><a href="address.html">Return</a>&nbsp;&nbsp;&nbsp;</label>
+								<div class="col-sm-10">
+									<input id="btn-add-new-address" type="button" class="col-md-1 btn btn-primary" value="Save" />
+									<input type="reset" class="col-md-offset-1 col-md-1 btn btn-primary" value="Reset" />
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+		<footer class="footer">
+
+			<div class="text-center rights container">
+				<div class="col-md-offset-2 col-md-2">
+					<span class="fa fa-thumbs-o-up"></span>
+					<p>Quality Assurance</p>
+				</div>
+				<div class="col-md-2">
+					<span class="fa fa-address-card-o"></span>
+					<p>Customized</p>
+				</div>
+				<div class="col-md-2">
+					<span class="fa fa-graduation-cap"></span>
+					<p>Special for students</p>
+				</div>
+				<div class="col-md-2">
+					<span class="fa fa-bitcoin"></span>
+					<p>Privilege</p>
+				</div>
+			</div>
+
+			<div class="container beforeBottom">
+				<div class="col-md-offset-1 col-md-3">
+					<div><img src="../images/index/stumalllogo.png" alt="" class="footLogo" /></div>
+					<div><img src="../images/index/footerFont.png" alt="" /></div>
+				</div>
+				<div class="col-md-4 callus text-center">
+					<div class="col-md-4">
+						<ul>
+							<li>
+								<a href="#">
+									<p>Business Help</p>
+								</a>
+							</li>
+							<li><a href="#">Beginner's Guide</a></li>
+							<li><a href="#">Service Guarantee</a></li>
+							<li><a href="#">Frequently asked</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li>
+								<a href="#">
+									<p>Merchant Help</p>
+								</a>
+							</li>
+							<li><a href="#">Merchant settled</a></li>
+							<li><a href="#">Merchant backend</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li>
+								<a href="#">
+									<p>About us</p>
+								</a>
+							</li>
+							<li><a href="#">About Tommy Technology</a></li>
+							<li><a href="#">Contact us</a></li>
+							<li>
+								<span class="fa fa-wechat"></span>
+								<span class="fa fa-weibo"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="col-md-5">
+						<p>App for Computer Plaza</p>
+						<img src="../images/index/ios.png" class="lf">
+						<img src="../images/index/android.png" alt="" class="lf" />
+					</div>
+					<div class="col-md-6">
+						<img src="../images/index/erweima.png">
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-12 text-center bottom">
+				Copyright © 2022 dnsc.cn All Rights Reserved 08963888-45 <a target="_blank" href="http://www.dnsc.cn/">Tommy Technology Co.Ltd</a>All rights reserved
+			</div>
+		</footer>
+
+
+		<script type="text/javascript">
+			let defaultOption = '<option value="0">----- Please select -----</option>';
+
+			$(document).ready(function() {
+				showProvinceList();
+				$("#city-list").append(defaultOption);
+				$("#area-list").append(defaultOption);
+			});
+
+			$("#province-list").change(function() {
+				showCityList();
+			});
+
+			$("#city-list").change(function() {
+				showAreaList();
+			});
+
+			function showProvinceList() {
+				$("#province-list").append(defaultOption);
+				$.ajax({
+					url: "/districts",
+					type: "GET",
+					data: "parent=86",
+					dataType: "JSON",
+					success: function(json) {
+						if (json.state == 200) {
+							let list = json.data;
+							console.log("count=" + list.length);
+							for (let i = 0; i < list.length; i++) {
+								console.log(list[i].name);
+								let option = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
+								$("#province-list").append(option);
+							}
+						}
+					}
+				});
+			}
+
+			function showCityList() {
+				let parent = $("#province-list").val();
+				$("#city-list").empty();
+				$("#area-list").empty();
+
+				$("#city-list").append(defaultOption);
+				$("#area-list").append(defaultOption);
+
+				if (parent == 0) {
+					return;
+				}
+
+				$.ajax({
+					url: "/districts",
+					type: "GET",
+					data: "parent=" + parent,
+					dataType: "JSON",
+					success: function(json) {
+						if (json.state == 200) {
+							let list = json.data;
+							console.log("count=" + list.length);
+							for (let i = 0; i < list.length; i++) {
+								console.log(list[i].name);
+								let option = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
+								$("#city-list").append(option);
+							}
+						}
+					}
+				});
+			}
+
+			function showAreaList() {
+				let parent = $("#city-list").val();
+				$("#area-list").empty();
+				$("#area-list").append(defaultOption);
+
+				if (parent == 0) {
+					return;
+				}
+
+				$.ajax({
+					url: "/districts",
+					type: "GET",
+					data: "parent=" + parent,
+					dataType: "JSON",
+					success: function(json) {
+						if (json.state == 200) {
+							let list = json.data;
+							console.log("count=" + list.length);
+							for (let i = 0; i < list.length; i++) {
+								console.log(list[i].name);
+								let option = '<option value="' + list[i].code + '">' + list[i].name + '</option>';
+								$("#area-list").append(option);
+							}
+						}
+					}
+				});
+			}
+			
+			$("#btn-add-new-address").click(function() {
+				$.ajax({
+					url: "/addresses/add_new_address",
+					type: "POST",
+					data: $("#form-add-new-address").serialize(),
+					dataType: "JSON",
+					success: function(json) {
+						if (json.state == 200) {
+							alert("Address added successfully！");
+						} else {
+							alert("Failed to add address！" + json.message);
+						}
+					},
+					error: function(xhr) {
+						alert("Your login  has expired, please log in again！HTTP Response Code：" + xhr.status);
+						location.href = "login.html";
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
