@@ -1,4 +1,4 @@
-# Computer-Plaza
+# Computer-Mall
 # Introduction
 Full stack Project
 
