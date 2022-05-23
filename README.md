@@ -16,3 +16,9 @@ Full stack Project
 - Database: Mysql 
 - Backend: Spring Boot + Mybatis + Maven  + AOP
 - Frontend: Html5 + Css5 + Ajax
+
+
+# Demo of this project:
+
+![image](https://user-images.githubusercontent.com/90006503/169746130-665486cb-02f2-44b1-9b22-de3a77e35d94.png)
+
