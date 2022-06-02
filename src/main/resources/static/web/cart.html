@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta name="renderer" content="webkit" />
+		<title>Computer Plaza</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="../bootstrap3/js/holder.js"></script>
+		<link href="../bootstrap3/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<script src="../bootstrap3/jquery-1.9.1.min.js"></script>
+		<script src="../bootstrap3/js/bootstrap.js"></script>
+
+		<link rel="stylesheet" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../css/top.css" />
+		<link rel="stylesheet" type="text/css" href="../css/footer.css" />
+		<link rel="stylesheet" type="text/css" href="../css/cart.css" />
+		<!-- <script src="../js/cart.js" type="text/javascript" charset="utf-8"></script> -->
+	</head>
+
+	<body>
+
+		<header class="header">
+
+			<div class="row">
+				<div class="col-md-3">
+					<a href="index.html">
+						<img src="../images/index/stumalllogo.png" />
+					</a>
+				</div>
+
+				<div class="col-md-9 top-item">
+					<ul class="list-inline pull-right">
+						<li><a href="favorites.html"><span class="fa fa-heart"></span>&nbsp;Favorites</a></li>
+						<li class="li-split">|</li>
+						<li><a href="orders.html"><span class="fa fa-file-text"></span>&nbsp;Orders</a></li>
+						<li class="li-split">|</li>
+						<li><a href="cart.html"><span class="fa fa-cart-plus"></span>&nbsp;Cart</a></li>
+						<li class="li-split">|</li>
+						<li>
+
+							<div class="btn-group">
+								<button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+									<span id="top-dropdown-btn"><span class="fa fa-gears"></span>&nbsp;Management <span class="caret"></span></span>
+								</button>
+								<ul class="dropdown-menu top-dropdown-ul" role="menu">
+									<li><a href="password.html">Modify Password</a></li>
+									<li><a href="userdata.html">Personal Information</a></li>
+									<li><a href="upload.html">Upload avatar</a></li>
+									<li><a href="address.html">Receipt management</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="li-split">|</li>
+						<li><a href="login.html"><span class="fa fa-user"></span>&nbsp;Login</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<div class="row top-nav">
+			<div class="col-md-6">
+				<ul class="nav nav-pills">
+					<li>
+						<a href="#"></a>
+					</li>
+					<li class="active"><a href="index.html"><span class="fa fa-home"></span></a></li>
+					<li><a href="#">Panic-buying</a></li>
+					<li><a href="#">Coupon</a></li>
+					<li><a href="#">VIP</a></li>
+					<li><a href="#">Take-out</a></li>
+					<li><a href="#">Market</a></li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<form action="search.html" class="form-inline pull-right" role="form">
+					<div class="form-group">
+						<input type="text" class="form-control" id="search" name="search" placeholder="Please enter item's name">
+					</div>
+					<button type="submit" class="btn btn-default btn-sm"><span class="fa fa-search"></span></button>
+				</form>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="col-md-offset-1 col-md-10">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<p class="panel-title"><span class="fa fa-shopping-cart"></span> Cart</p>
+					</div>
+					<div class="panel-body">
+						<form action="orderConfirm.html" role="form" >
+
+							<table class="cart-table" width="100%">
+								<thead>
+									<tr>
+										<th width="8%">
+											<input type="checkbox" class="ckall" onclick="checkall(this)" />Select All</th>
+										<th width="110"></th>
+										<th width="29%">Item</th>
+										<th width="11%">Price</th>
+										<th width="15%">Num</th>
+										<th width="11%">Sum</th>
+										<th>Operation</th>
+									</tr>
+								</thead>
+								<tbody id="cart-list" class="cart-body">
+									<tr>
+										<td>
+											<input type="checkbox" class="ckitem" />
+										</td>
+										<td><img src="../images/portal/12DELLXPS13-silvery/collect.png" class="img-responsive" /></td>
+										<td>Lenovo Air13 Pro 13.3inch14.8mm laptop</td>
+										<td>$<span id="goodsPrice1">798</span></td>
+										<td>
+											<input type="button" value="-" class="num-btn" onclick="reduceNum(1)" />
+											<input id="goodsCount1" type="text" size="2" readonly="readonly" class="num-text" value="1">
+											<input class="num-btn" type="button" value="+" onclick="addNum(1)" />
+										</td>
+										<td><span id="goodsCast1"></span></td>
+										<td>
+											<input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="delete" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" class="ckitem" />
+										</td>
+										<td><img src="../images/portal/16LenovoYOGA900green/collect.png" class="img-responsive" /></td>
+										<td>DELL XPS13-9360-R1609 13.3</td>
+										<td>$<span id="goodsPrice2">588</span></td>
+										<td>
+											<input type="button" value="-" class="num-btn" onclick="reduceNum(2)" />
+											<input id="goodsCount2" type="text" size="2" readonly="readonly" class="num-text" value="1">
+											<input class="num-btn" type="button" value="+" onclick="addNum(2)" />
+										</td>
+										<td><span id="goodsCast2"></span></td>
+										<td>
+											<input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="delete" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" class="ckitem" />
+										</td>
+										<td><img src="../images/portal/13LenovoIdeaPad310_silvery/collect.png" class="img-responsive" /></td>
+										<td>DELL 15MF Pro-R2505TSS</td>
+										<td>$<span id="goodsPrice3">699</span></td>
+										<td>
+											<input type="button" value="-" class="num-btn" onclick="reduceNum(3)" />
+											<input id="goodsCount3" type="text" size="2" readonly="readonly" class="num-text" value="1">
+											<input class="num-btn" type="button" value="+" onclick="addNum(3)" />
+										</td>
+										<td><span id="goodsCast3"></span></td>
+										<td>
+											<input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="delete" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="total-bar">
+								<a href="javascript:selDelCart()" class="cart-del-sel btn btn-default btn-xs">Delete selected items</a>
+								<span class="pull-right">Selected product
+								<span id="selectCount">0</span>Amount Total Price$
+								<span id="selectTotal">0</span>dollars
+								</span>
+							</div>
+							<div>
+								<span class="pull-right">
+								<input type="submit" value="  settlement  " class="btn btn-primary btn-lg link-account" />
+							</span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+		<footer class="footer">
+
+			<div class="text-center rights container">
+				<div class="col-md-offset-2 col-md-2">
+					<span class="fa fa-thumbs-o-up"></span>
+					<p>Quality Assurance</p>
+				</div>
+				<div class="col-md-2">
+					<span class="fa fa-address-card-o"></span>
+					<p>Customized</p>
+				</div>
+				<div class="col-md-2">
+					<span class="fa fa-graduation-cap"></span>
+					<p>Special for students</p>
+				</div>
+				<div class="col-md-2">
+					<span class="fa fa-bitcoin"></span>
+					<p>Privilege</p>
+				</div>
+			</div>
+
+			<div class="container beforeBottom">
+				<div class="col-md-offset-1 col-md-3">
+					<div><img src="../images/index/stumalllogo.png" alt="" class="footLogo" /></div>
+					<div><img src="../images/index/footerFont.png" alt="" /></div>
+				</div>
+				<div class="col-md-4 callus text-center">
+					<div class="col-md-4">
+						<ul>
+							<li>
+								<a href="#">
+									<p>Business Help</p>
+								</a>
+							</li>
+							<li><a href="#">Beginner's Guide</a></li>
+							<li><a href="#">Service Guarantee</a></li>
+							<li><a href="#">Frequently asked</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li>
+								<a href="#">
+									<p>Merchant Help</p>
+								</a>
+							</li>
+							<li><a href="#">Merchant settled</a></li>
+							<li><a href="#">Merchant backend</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul>
+							<li>
+								<a href="#">
+									<p>About us</p>
+								</a>
+							</li>
+							<li><a href="#">About Tommy Technology</a></li>
+							<li><a href="#">Contact us</a></li>
+							<li>
+								<span class="fa fa-wechat"></span>
+								<span class="fa fa-weibo"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="col-md-5">
+						<p>App for Computer Plaza</p>
+						<img src="../images/index/ios.png" class="lf">
+						<img src="../images/index/android.png" alt="" class="lf" />
+					</div>
+					<div class="col-md-6">
+						<img src="../images/index/erweima.png">
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-12 text-center bottom">
+				Copyright © 2022 dnsc.cn All Rights Reserved 08963888-45 <a target="_blank" style="font-size: 12px" href="http://www.dnsc.cn/">Tommy Technology Co.Ltd</a>All rights reserved
+			</div>
+			</div>
+		</footer>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				showCartList();
+			});
+
+			function showCartList() {
+				$("#cart-list").empty();
+				$.ajax({
+					url: "/carts",
+					type: "GET",
+					dataType: "JSON",
+					success: function(json) {
+						let list = json.data;
+						for (let i = 0; i < list.length; i++) {
+							let tr = '<tr>'
+										+ '<td>'
+										+ 	'<input name="cids" value="#{cid}" type="checkbox" class="ckitem" />'
+										+ '</td>'
+										+ '<td><img src="..#{image}collect.png" class="img-responsive" /></td>'
+										+ '<td>#{title}#{msg}</td>'
+										+ '<td>¥<span id="price-#{cid}">#{realPrice}</span></td>'
+										+ '<td>'
+										+ 	'<input type="button" value="-" class="num-btn" onclick="reduceNum(1)" />'
+										+ 	'<input id="num-#{cid}" type="text" size="2" readonly="readonly" class="num-text" value="#{num}">'
+										+ 	'<input class="num-btn" type="button" value="+" onclick="addNum(#{cid})" />'
+										+ '</td>'
+										+ '<td>¥<span id="total-price-#{cid}">#{totalPrice}</span></td>'
+										+ '<td>'
+										+ 	'<input type="button" onclick="delCartItem(this)" class="cart-del btn btn-default btn-xs" value="delete" />'
+										+ '</td>'
+									 + '</tr>';
+							tr = tr.replace(/#{cid}/g, list[i].cid);
+							tr = tr.replace(/#{title}/g, list[i].title);
+							tr = tr.replace(/#{image}/g, list[i].image);
+							tr = tr.replace(/#{realPrice}/g, list[i].realPrice);
+							tr = tr.replace(/#{num}/g, list[i].num);
+							tr = tr.replace(/#{totalPrice}/g, list[i].realPrice * list[i].num);
+
+							if (list[i].realPrice < list[i].price) {
+								tr = tr.replace(/#{msg}/g, "Reduced price than when you joined" + (list[i].price - list[i].realPrice) + "dollars");
+							} else {
+								tr = tr.replace(/#{msg}/g, "");
+							}
+							$("#cart-list").append(tr);
+						}
+					}
+				});
+			}
+
+			function addNum(cid) {
+				$.ajax({
+					url: "/carts/" + cid,
+					type: "POST",
+					dataType: "JSON",
+					success: function(json) {
+						if (json.state == 200) {
+
+							$("#num-" + cid).val(json.data);
+							let price = $("#price-" + cid).html();
+							let totalPrice = price * json.data;
+							$("#total-price-" + cid).html(totalPrice);
+						} else {
+							alert("Failed to add items！" + json.message);
+						}
+					},
+					error: function(xhr) {
+						alert("Your login  has expired, please log in again！HTTP Response Code：" + xhr.status);
+						location.href = "login.html";
+					}
+				});
+			}
+
+		</script>
+	</body>
+
+</html>
