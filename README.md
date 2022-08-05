@@ -1,4 +1,4 @@
-# Computer-Mall
+# Amazon like Ecommerce
 # Introduction
 Full stack Project
 
